@@ -1,4 +1,4 @@
-/*Everybody knows the classic "half your age plus seven" dating rule that a lot
+/* Everybody knows the classic "half your age plus seven" dating rule that a lot
 of people follow (including myself). It's the 'recommended' age range in which to date someone.
 
 minimum age <= your age <= maximum age
@@ -13,17 +13,16 @@ This equation doesn't work when the age <= 14, so use this equation instead:
 min = age - 0.10 * age
 max = age + 0.10 * age
 You should floor all your answers so that an integer is given instead of a float
-(which doesn't represent age). Return your answer in the form [min]-[max]*/
+(which doesn't represent age). Return your answer in the form [min]-[max] */
 
 
-function datingRange(age){
+function datingRange(age) {
   if (age > 14) {
   var min = Math.floor(age / 2 + 7);
   var max = (age - 7) * 2;
-}
-  else {
+  } else {
   var min = Math.floor(age - 0.10 * age);
   var max = Math.floor(age + 0.10 * age);
-}
-return `${min}-${max}`;
   }
+  return `${min}-${max}`;
+}
