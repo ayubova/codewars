@@ -18,28 +18,27 @@ Your task is to write a program which will print a list of all happy numbers bet
 
 Disclaimer: This Kata is an adaptation of a HW assignment I had for McGill University's COMP 208 (Computers in Engineering) class. */
 
-function happyNumbers(x) {
-  const sumOfSquares = num => String(num).split('').reduce((acc, value) => (value * value) + acc, 0);
-  const isHappyNumber = (number) => {
-    const iter = (number, acc) => {
-      if (number === 1) {
-        return true;
-      } else if (acc.includes(number)) {
-        return false;
-      }
-      return iter(sumOfSquares(number), acc.concat(number));
-    };
-    return iter(number, []);
-  };
-  const sequence = (max) => {
-    let result = [1];
-    for (let i = 7; i <= max; i += 1) {
-      if (isHappyNumber(i)) {
-        result = result.push(i);
-      }
-    }
-    return result;
-  };
+const sumOfSquares = num => String(num).split('').reduce((acc, value) => (value * value) + acc, 0);
 
-  return sequence(x);
-}
+const isHappyNumber = (number) => {
+  const iter = (number, acc) => {
+    if (number === 1) {
+      return true;
+    } else if (acc.includes(number)) {
+      return false;
+    }
+    return iter(sumOfSquares(number), acc.concat(number));
+  };
+  return iter(number, []);
+};
+
+const happyNumbers = (x) => {
+  let result = [1];
+  for (let i = 7; i <= x; i += 1) {
+    if (isHappyNumber(i)) {
+      result = result.concat(i);
+    }
+  }
+  return result;
+};
+
