@@ -8,3 +8,4 @@ function GetSum(a, b) {
   else if (a < b) return a + GetSum(a + 1, b);
   return a + GetSum(a - 1, b);
 }
+
