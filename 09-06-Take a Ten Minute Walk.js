@@ -6,7 +6,6 @@ to walk (eg. ['n', 's', 'w', 'e']). You know it takes you one minute to traverse
 so create a function that will return true if the walk the app gives you will take you exactly ten
 minutes (you don't want to be early or late!) and will return you to your starting point.
 Return false otherwise.
-
 Note: you will always receive a valid array containing a random assortment of direction letters
 ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's
 standing still!). */
