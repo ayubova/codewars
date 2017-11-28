@@ -28,3 +28,8 @@ function getConsectiveItems(items, key) {
   }
   return result;
 }
+
+const convert = array => {
+  return array.reduce((acc, arr) => ({ ...acc, arr[0] : arr[1] }), {})
+}
+
