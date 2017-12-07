@@ -7,5 +7,5 @@ function tripledouble(num1, num2) {
   const triples = arr => arr.filter((value, index) => value === arr[index + 1] && value === arr[index + 2]);
   const hasDouble = array => array.filter((value, index) => value === array[index + 1] && triples(array1).includes(value)).length > 0;
 
-  return triples(array1) && hasDouble(array2) > 0 ? 1 : 0;
+  return Number(hasDouble(array2));
 }
