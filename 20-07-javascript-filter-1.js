@@ -1,0 +1,1 @@
+const searchNames = logins => logins.filter(value => value[0][value[0].length - 1] === '_');
