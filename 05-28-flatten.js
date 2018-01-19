@@ -1,0 +1,1 @@
+const flatten = (...args) => args.reduce((acc, value) => value instanceof Array ? [...acc, ...flatten(...value)]: [...acc, value], []);
